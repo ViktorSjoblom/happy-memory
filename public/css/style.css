@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapped-container {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(9, 94, 9);
+}
+
+.button-flex {
+width: 100%;
+position: absolute;
+display: flex;
+flex-direction: column-reverse;
+align-items: flex-end;
+padding: 3.5rem 10rem 0 0;
+}
+
+h1 {
+    color: lavenderblush;
+    text-decoration: underline black;
+}
+
+p {
+    color: lavenderblush;
+    margin: 1rem 0;
+}
+
+.start {
+    background-color: rgb(168, 132, 14);
+    color: black;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px;
+    transition: 0.2s ease all;
+    margin: 0 0.5rem;
+}
+
+.start:hover {
+    transform: scale(0.95);
+    box-shadow: 1px 1px 5px;
+    background-color: rgb(197, 195, 192);
+}
+
+.start:focus {
+    outline: 0;
+}
+
+.memory-container {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    justify-content: center;
+    padding-bottom: 45rem;
+}
+
+.memory-card {
+    position: relative;
+    width: 60px;
+    height: 120px;
+    margin: 1.3rem;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    border-radius: 15px;
+}
+
+.memory-card:hover {
+    box-shadow:0px 0px 30px #fdec6e;
+
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-side,
+.back-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px;
+}
+
+#back-side {
+    width: 100%;
+    height: 100%;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-side {
+    transform: rotateY(180deg);
+}
+
+.replay-message {
+    position: absolute;
+    top: 45%;
+    left: 100vw;
+    color: lavenderblush;
+    transition-duration: 1s;
+    width: 100%;
+}
+
+.replay-shuffling {
+    transform: translateX(-55vw);
+}
+
+h2 {
+    display: flex;
+}

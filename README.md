@@ -14,16 +14,9 @@ You need a server software, for example MAMP
 $ git clone https://github.com/ViktorSjoblom/happy-memory
 ```
 
-2. Navigate to the folder where you cloned the repository via the terminal
+2. Open the index.html file located in the public folder
 
-3. Start a local server 
-```
-php -S localhost:8888
-```
-4. Open up your favorite browser and enter localhost:8888/index.php in the url
-
-5. Enjoy!
-
+3. Enjoy!
 
 ## Built With
 
