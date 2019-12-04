@@ -1,11 +1,6 @@
 # Fuzzy Memory
 <img src="https://media.giphy.com/media/YfGkjrnVIk3jq/giphy.gif" width="100%">
 
-
-### Prerequisites
-
-You need a server software, for example MAMP
-
 ### Installing
 
 1. Clone the repository
