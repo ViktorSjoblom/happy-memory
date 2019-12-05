@@ -154,6 +154,14 @@ memoryCards.forEach((memoryCard) => {
 
 shuffle();
 
+// This is the click-counter
+var clickCounter = 0;
+function onClick() {
+    clickCounter++;
+    document.getElementById("clicks").innerHTML = clickCounter;
+
+}
+
 
 // This is a function that resets the game and the click-counter
 function startGame() {
@@ -172,12 +180,3 @@ function startGame() {
     enableCards();
 
 }
-
-
-// This is the click-counter
-var clickCounter = 0;
-function onClick() {
-    clickCounter++;
-    document.getElementById("clicks").innerHTML = clickCounter;
-
-};

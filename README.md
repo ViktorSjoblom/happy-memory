@@ -25,10 +25,12 @@ $ git clone https://github.com/ViktorSjoblom/happy-memory
 
 ## Testers
 
-* 
-* 
+* Erik Johannesson
+* Betsy Alva Soplin
 
 ## Code Review
+
+* Emelie Petersson
 
 ## License
 

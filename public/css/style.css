@@ -19,17 +19,21 @@ body {
 }
 
 .button-flex {
-width: 100%;
-position: absolute;
-display: flex;
-flex-direction: column-reverse;
-align-items: flex-end;
-padding: 3.5rem 10rem 0 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding: 3.5rem 10rem 0 0;
 }
 
 h1 {
     color: lavenderblush;
     text-decoration: underline black;
+}
+
+h2 {
+    display: flex;
 }
 
 p {
@@ -117,17 +121,14 @@ p {
 
 .replay-message {
     position: absolute;
-    top: 45%;
-    left: 100vw;
+    top: 100%;
+    left: 77%;
     color: lavenderblush;
     transition-duration: 1s;
     width: 100%;
 }
 
 .replay-shuffling {
-    transform: translateX(-58vw);
+    transform: translateY(-70vh);
 }
 
-h2 {
-    display: flex;
-}
