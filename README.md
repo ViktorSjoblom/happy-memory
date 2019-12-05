@@ -3,7 +3,7 @@
 
 ### About
 
-This was a project in JavaScript where we were assigned to build a memory card game using only JavaScript, HTML and CSS.
+This is a project in JavaScript where we were assigned to build a memory card game using only JavaScript, HTML and CSS.
 
 ### Installing
 
