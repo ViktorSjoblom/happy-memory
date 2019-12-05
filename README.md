@@ -13,6 +13,14 @@ $ git clone https://github.com/ViktorSjoblom/happy-memory
 
 3. Enjoy!
 
+ **OR**
+
+ 1. Visit netlify
+
+```
+https://happy-memory.netlify.com
+```
+
 ## Built With
 
 * JavaScript
