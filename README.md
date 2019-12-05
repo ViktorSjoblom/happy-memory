@@ -1,6 +1,10 @@
 # Happy Memory
 <img src="https://media.giphy.com/media/YVPwi7L2izTJS/giphy.gif" width="100%">
 
+### About
+
+This was a project in JavaScript where we were assigned to build a memory card game using only JavaScript, HTML and CSS.
+
 ### Installing
 
 1. Clone the repository
