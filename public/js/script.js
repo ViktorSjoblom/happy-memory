@@ -1,3 +1,4 @@
+// All the diffrent picutres on the front-side of the cards
 const cards = [
     {image: "./img/breznak.jpg", type: "breznak"},
     {image: "./img/carlsberg.jpg", type: "carlsberg"},
@@ -17,32 +18,38 @@ const cards = [
     {image: "./img/tuborg.jpg", type:"tuborg"},
 ]
 
+
+// This fetches the class ".memory-container"
 const container = document.querySelector('.memory-container');
+// This fetches the class ".start"
 const start = document.querySelector('.start');
+// This fetches the class ".replay-message"
 const replayMessage = document.querySelector('.replay-message');
 
-// Helper function to prevent XSS injections
-// Creates an HTML element from string
+// This creates an HTML element from a string
 function stringToHTML (str) {
     const div = document.createElement("div");
     div.innerHTML = str;
     return div.firstChild;
   };
 
-// This function creates an image tag from the cards array
+
+// This function creates an image tag from the cards array using template literal
 function createCard(image, type) {
     return `<div class="memory-card" data-framework="${type}"><img class="front-side" src="${image}">
             <img class="back-side" id="back-side" src="https://images-na.ssl-images-amazon.com/images/I/715dsfeaDdL._SL1500_.jpg">
     </div>`
 }
 
-// This function generates the cards from the cards array to the DOM and appends it to the memoryContainer
+
+// This function generates the cards from the cards array to the DOM, (Document Object Model), and appends it to the memory container
 function generateCards() {
     cards.forEach((card) => {
         const image = createCard(card.image, card.type);
         container.appendChild(stringToHTML(image));
     })
 }
+
 
 // This generates the cards to the DOM on load
 generateCards(); 
@@ -51,7 +58,8 @@ const memoryCards = document.querySelectorAll('.memory-card');
 
 start.addEventListener('click', startGame)
 
-// This function shuffles the card by randomizing the positioning within the flex box
+
+// This is a function that shuffles the cards by randomizing the position inside the flex box
 function shuffle() {
     memoryCards.forEach(card => {
         let randomPosition = Math.floor(Math.random() * 8);
@@ -62,6 +70,8 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
+
+// This is a function that flips the cards
 function flipCard() {
 
     if (lockBoard) {return;}
@@ -82,10 +92,10 @@ function flipCard() {
     secondCard = this;
         
     checkForMatch();   
-} 
+}
 
 
-// this function checks for a match by comparing the data type of the cards
+// This fucntion checks for a match by comparing the data type on the cards
 function checkForMatch() {
 
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
@@ -98,7 +108,7 @@ function checkForMatch() {
   }
 
 
-// This function disables the cards from flipping and is called in the checkForMatch function to prevent two matched cards from being flipped again.
+// This function disables the cards from flipping, and its called in the checkForMatch-function to prevent two matched cards from being flipped again.
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -136,13 +146,16 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-// add the flip class when clicking on one of the cards, flipping the cards.
+
+// Add the function flipCard when clicking on one of the cards, witch then flips the card, (duh)
 memoryCards.forEach((memoryCard) => {
     memoryCard.addEventListener('click', flipCard)
     })
 
 shuffle();
 
+
+// This is a function that resets the game and the click-counter
 function startGame() {
     
     setTimeout(shuffle, 500);
@@ -160,6 +173,8 @@ function startGame() {
 
 }
 
+
+// This is the click-counter
 var clickCounter = 0;
 function onClick() {
     clickCounter++;
