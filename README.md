@@ -1,5 +1,5 @@
 # Fuzzy Memory
-<img src="https://media.giphy.com/media/YfGkjrnVIk3jq/giphy.gif" width="100%">
+<img src="https://media.giphy.com/media/YfGkjrnVIk3jq/giphy.gif" width="50%">
 
 ### Installing
 
