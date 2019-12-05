@@ -1,4 +1,4 @@
-# Fuzzy Memory
+# Happy Memory
 <img src="https://media.giphy.com/media/YVPwi7L2izTJS/giphy.gif" width="100%">
 
 ### Installing
