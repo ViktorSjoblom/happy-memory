@@ -19,7 +19,7 @@ $ git clone https://github.com/ViktorSjoblom/happy-memory
 
  **OR**
 
- 1. Visit netlify
+Visit netlify
 
 ```
 https://happy-memory.netlify.com
