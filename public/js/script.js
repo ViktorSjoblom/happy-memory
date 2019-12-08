@@ -141,11 +141,6 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-}
-
 
 // Add the function flipCard when clicking on one of the cards, witch then flips the card, (duh)
 memoryCards.forEach((memoryCard) => {
@@ -159,7 +154,6 @@ var clickCounter = 0;
 function onClick() {
     clickCounter++;
     document.getElementById("clicks").innerHTML = clickCounter;
-
 }
 
 
@@ -178,5 +172,4 @@ function startGame() {
     }, 2000);
     
     enableCards();
-
 }

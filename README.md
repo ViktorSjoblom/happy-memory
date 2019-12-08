@@ -45,7 +45,11 @@ https://happy-memory.netlify.com
 * Emelie Petersson
 
 ```
-text text text 
+1. dela upp javascript funktionerna i mindre filer ? (jag har inte gjort det själv men såg att maja hade gjort det och tänker att det kanske är en bra grej :sweat_smile:)
+2. script.js: Man kan använd element.cloneNode(true) för att skapa kopior av korten istället för att göra dupletter i const cards
+3. Script.js: 139-147 Du har angett funktionen resetBoard två gånger här
+4. script.js: 155 shuffle(); dyker upp rätt random, kanske bara ska sätta den i anslutning till funktionen, så det blir tydligt att funktionen ska köras direkt
+5. Script.js: 172-173 “clickCounter = 0;” och “document.getElementById("clicks").innerHTML = 0;” ligger innanför en foreach loop, tror dom kan flyttas ut eftersom click countern inte har något med korten att göra (?)
 ```
 
 ## License
