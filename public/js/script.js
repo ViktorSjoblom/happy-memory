@@ -8,16 +8,10 @@ const cards = [
     {image: "./img/lapinkulta.jpg", type: "lapinkulta"},
     {image: "./img/threetowns.jpg", type: "threetowns"},
     {image: "./img/tuborg.jpg", type:"tuborg"},
-    {image: "./img/breznak.jpg", type: "breznak"},
-    {image: "./img/carlsberg.jpg", type: "carlsberg"},
-    {image: "./img/coors.jpg", type: "coors"},
-    {image: "./img/falcon.jpg", type:"falcon"},
-    {image: "./img/koekedam.jpg", type: "koekedam"},
-    {image: "./img/lapinkulta.jpg", type: "lapinkulta"},
-    {image: "./img/threetowns.jpg", type: "threetowns"},
-    {image: "./img/tuborg.jpg", type:"tuborg"},
 ]
 
+const dubbleCards = [...cards, ...cards];
+console.log(dubbleCards);
 
 // This fetches the class ".memory-container"
 const container = document.querySelector('.memory-container');
@@ -41,15 +35,13 @@ function createCard(image, type) {
     </div>`
 }
 
-
 // This function generates the cards from the cards array to the DOM, (Document Object Model), and appends it to the memory container
 function generateCards() {
-    cards.forEach((card) => {
+    dubbleCards.forEach((card) => {
         const image = createCard(card.image, card.type);
         container.appendChild(stringToHTML(image));
     })
 }
-
 
 // This generates the cards to the DOM on load
 generateCards(); 
@@ -57,7 +49,6 @@ generateCards();
 const memoryCards = document.querySelectorAll('.memory-card');
 
 start.addEventListener('click', startGame)
-
 
 // This is a function that shuffles the cards by randomizing the position inside the flex box
 function shuffle() {
@@ -69,7 +60,6 @@ function shuffle() {
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
-
 
 // This is a function that flips the cards
 function flipCard() {
@@ -94,7 +84,6 @@ function flipCard() {
     checkForMatch();   
 }
 
-
 // This fucntion checks for a match by comparing the data type on the cards
 function checkForMatch() {
 
@@ -107,7 +96,6 @@ function checkForMatch() {
     }
   }
 
-
 // This function disables the cards from flipping, and its called in the checkForMatch-function to prevent two matched cards from being flipped again.
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
@@ -115,7 +103,6 @@ function disableCards() {
 
     resetBoard();
 }
-
 
 function enableCards() {
     memoryCards.forEach((memoryCard) => {
@@ -141,7 +128,6 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-
 // Add the function flipCard when clicking on one of the cards, witch then flips the card, (duh)
 memoryCards.forEach((memoryCard) => {
     memoryCard.addEventListener('click', flipCard)
@@ -155,7 +141,6 @@ function onClick() {
     clickCounter++;
     document.getElementById("clicks").innerHTML = clickCounter;
 }
-
 
 // This is a function that resets the game and the click-counter
 function startGame() {
